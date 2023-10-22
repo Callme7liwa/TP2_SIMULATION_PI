@@ -349,7 +349,7 @@ void startExo3(){
     int nbPoints = 1000;
     double meanPI,confidenceRadius;
     calculerMeanEtConfidenceRadius(nbExperiments, nbPoints, &meanPI, &confidenceRadius);
-    printf("L'intervalle de confiance Ã  95 pourcents pour n = %d et nbrPoints = %d est de [%lf, %lf]\n", nbExperiments, nbPoints, meanPI - confidenceRadius, meanPI + confidenceRadius);
+    printf("L'intervalle de confiance a 95 pourcents pour n = %d et nbrPoints = %d est de [%lf, %lf]\n", nbExperiments, nbPoints, meanPI - confidenceRadius, meanPI + confidenceRadius);
 }
 
 
