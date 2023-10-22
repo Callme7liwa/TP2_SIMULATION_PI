@@ -18,17 +18,26 @@
         ->  Elle retourne la moyenne des estimations (type double) de Pi obtenues à partir des expériences.
 */
 
-/*   -- meanPiWihResults : 
+/*   -- meanPiWithResults : 
         Fonction pour calculer la moyenne des estimations de Pi avec nombre definie d'experiences toute en stockant 
         les valeurs de chaque simulation de PI dans un tableau resultat.
      
      -- Entrees : 
         * @param nbPoints         Le nombre de points générés dans chaque expérience.
         * @param nbExperiments    Le nombre total d'expériences effectuées.
+     -- Sorties : 
+        <- Elle retourne la moyenne des estimations (type double) de Pi obtenues à partir des expériences.
+*/
+
+/*   -- calculerMeanEtConfidenceRadius : 
+        Calcule la moyenne de Pi et le rayon de confiance correspondant en utilisant les résultats d'un nombre donné d'expériences.
+
+     -- Entrees : 
+        * @param nbPoints         Le nombre de points générés dans chaque expérience.
+        * @param nbExperiments    Le nombre total d'expériences effectuées.
         * @param ptrMeanPI        Un pointeur vers une variable où stocker la moyenne de Pi calculée.
         * @param ptrConfidenceRadius Un pointeur vers une variable où stocker le rayon de confiance calculé.
 */
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -207,7 +216,8 @@ double meanPi(int nbPoints, int nbExperiments)
     return meanPI;
 }
 
-// Effectue plusieurs simulations pour estimer la valeur de pi et retourne la moyenne des estimations
+// Fonction pour calculer la moyenne des estimations de Pi avec nombre definie d'experiences toute en stockant 
+// les valeurs de chaque simulation de PI dans un tableau resultat.
 double meanPiWithResults(int nbPoints, int nbExperiments ,double resultats[])
 {
     double meanPI;
@@ -348,8 +358,8 @@ int main()
     unsigned long init[4]={0x123, 0x234, 0x345, 0x456}, length=4;
     init_by_array(init, length);
     
-     startExo1();
-     // startExo2();
-    //startExo3();
+    startExo1();
+    // startExo2();
+    // startExo3();
     return 0;
 }
